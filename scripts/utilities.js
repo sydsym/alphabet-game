@@ -77,7 +77,15 @@ function keyPressed(event){
     
 }
 
+function enterKey(event){
+    if(event.key === "Enter"){
+        playNow()
+    }
+}
+
 document.addEventListener('keyup', keyPressed);
+document.addEventListener('keyup', enterKey);
+
 
 function continuePlay(){
     const randomLetter = getRandomLetter();
@@ -91,7 +99,7 @@ function gameOver(){
 
     const finalScore = parseInt(document.getElementById('current-score').innerText);
     showText('final-score', finalScore)
-    
+
     showElement('score-card');
     const currentLetter = document.getElementById('current-letter').innerText.toLowerCase();
     removeHighlightLetter(currentLetter);
