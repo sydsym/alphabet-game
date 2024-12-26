@@ -91,6 +91,7 @@ function gameOver(){
 
     const finalScore = parseInt(document.getElementById('current-score').innerText);
     showText('final-score', finalScore)
+    
     showElement('score-card');
     const currentLetter = document.getElementById('current-letter').innerText.toLowerCase();
     removeHighlightLetter(currentLetter);
