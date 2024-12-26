@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha Pro</title>
-
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
     <!-- tailwind and daisyUI cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css"
@@ -16,5 +16,109 @@
     <link rel="stylesheet" href="styles/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body>
+    <main
+      class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-center bg-no-repeat"
+    >
+      <!-- home section  -->
+      <section
+        id="home"
+        class="min-h-screen flex flex-col justify-center items-center gap-5 hidden"
+      >
+        <h1 class="text-center text-white text-[11rem] font-anton uppercase">
+          Alphabet clash
+        </h1>
+        <p class="text-center font-poppins text-2xl text-white">
+          Unleash Your Keyboard Kung Fu : Press “Enter” to Play
+        </p>
+        <button class="btn bg-white font-poppins font-semibold text-2xl">
+          Play Now
+        </button>
+      </section>
+      <!-- play ground  -->
+      <section
+        id="playground"
+        class="flex flex-col justify-center items-center gap-8 min-h-screen hidden"
+      >
+        <!-- Gameboard  -->
+        <div
+          class="h-[450px] w-3/4 bg-[#FFFFFFCC] border-[16px] border-[#010313CC] rounded-xl"
+        >
+          <p
+            class="bg-[#010313CC] text-white text-center max-w-80 m-auto rounded-b-xl"
+          >
+            Don't watch keyboard while playing...
+          </p>
+          <div class="h-5/6 flex justify-center items-center">
+            <p
+              class="uppercase font-semibold font-poppins text-center text-9xl"
+            >
+              A
+            </p>
+          </div>
+        </div>
+        <!-- keyboard  -->
+        <div class="font-inter">
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="q" class="kbd">q</kbd>
+            <kbd id="w" class="kbd">w</kbd>
+            <kbd id="e" class="kbd">e</kbd>
+            <kbd id="r" class="kbd">r</kbd>
+            <kbd id="t" class="kbd">t</kbd>
+            <kbd id="y" class="kbd">y</kbd>
+            <kbd id="u" class="kbd">u</kbd>
+            <kbd id="i" class="kbd">i</kbd>
+            <kbd id="o" class="kbd">o</kbd>
+            <kbd id="p" class="kbd">p</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="a" class="kbd">a</kbd>
+            <kbd id="s" class="kbd">s</kbd>
+            <kbd id="d" class="kbd">d</kbd>
+            <kbd id="f" class="kbd">f</kbd>
+            <kbd id="g" class="kbd">g</kbd>
+            <kbd id="h" class="kbd">h</kbd>
+            <kbd id="j" class="kbd">j</kbd>
+            <kbd id="k" class="kbd">k</kbd>
+            <kbd id="l" class="kbd">l</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="z" class="kbd">z</kbd>
+            <kbd id="x" class="kbd">x</kbd>
+            <kbd id="c" class="kbd">c</kbd>
+            <kbd id="v" class="kbd">v</kbd>
+            <kbd id="b" class="kbd">b</kbd>
+            <kbd id="n" class="kbd">n</kbd>
+            <kbd id="m" class="kbd">m</kbd>
+          </div>
+        </div>
+        <!-- score and lives  -->
+        <div class="flex justify-between w-3/4 font-poppins text-white">
+          <p class="bg-[#894189] rounded-full px-4 py-2">
+            Life <img class="inline" src="images/favicon.svg" /> <span>1</span>
+          </p>
+          <p class="bg-[#360490] rounded-full px-4 py-2">
+            Score <img class="inline" src="images/dollar.svg" /> <span>1</span>
+          </p>
+        </div>
+      </section>
+      <!-- score card  -->
+      <section
+        id="score-card"
+        class="min-h-screen flex justify-center items-center text-poppins text-white"
+      >
+        <div
+          class="flex flex-col gap-4 text-center bg-[#6C0EEB] p-5 rounded-xl"
+        >
+          <h1 class="text-7xl font-extrabold">Score: <span>14</span></h1>
+          <div class="text-center">
+            <button class="btn text-black bg-white">Play Again</button>
+          </div>
+          <p>Practice will make you Pro</p>
+        </div>
+      </section>
+    </main>
+    <script src="scripts/utilities.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>
